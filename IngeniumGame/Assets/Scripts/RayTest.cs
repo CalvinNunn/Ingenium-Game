@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RayTest : MonoBehaviour
 {
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -13,20 +14,21 @@ public class RayTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        RaycastHit hit;
+        Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+
+        Debug.DrawRay(ray.origin, Camera.main.transform.forward * 10, Color.red);
+
+        if (Physics.Raycast(ray, out hit))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider != null)
-                {
-                    hit.collider.enabled = false;
-                }
-            }
-
+            Transform objectHit = hit.transform;
+                        
+            Debug.DrawRay(ray.origin, Camera.main.transform.TransformDirection(Vector3.forward) * 10, Color.blue);
+            
+            Debug.Log(objectHit);
         }
+
+
     }
 }
 
