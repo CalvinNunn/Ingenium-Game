@@ -18,7 +18,7 @@ namespace CommandPattern
 
         public override void Execute(GameObject p, Command c)
         {
-            p.GetComponent<RayTest>().mouse();
+            p.GetComponent<Control>().mouse();
 
             mP(p);
 
