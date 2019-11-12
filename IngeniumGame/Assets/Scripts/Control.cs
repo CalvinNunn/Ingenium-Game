@@ -118,8 +118,14 @@ public class Control : MonoBehaviour
             {
                 if (e.GetComponent<EnemyControl>().Enemies[i].activeInHierarchy == false && timer > 30)
                 {
+
+                    e.Enemies[i].transform.parent = e.cameraP.transform;
                     e.GetComponent<EnemyControl>().Enemies[i].SetActive(true);
-                    e.GetComponent<EnemyControl>().Enemies[i].transform.position = new Vector3(x, y, z);
+                    //e.GetComponent<EnemyControl>().Enemies[i].transform.position = e.cameraP.transform.position + e.cameraP.transform.forward * 5;
+                    Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height),
+          Camera.main.nearClipPlane * 20));
+                    e.GetComponent<EnemyControl>().Enemies[i].transform.position = screenPosition;
+                    e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
                     timer = 0;
                 }
             }

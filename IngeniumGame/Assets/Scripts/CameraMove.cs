@@ -7,6 +7,7 @@ public class CameraMove : MonoBehaviour
     public GameObject currentPos;
     public GameObject nextPos;
     public float interv;
+    public TutorialController tc;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,13 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.transform.position != nextPos.transform.position)
+        if (tc.tutorial == false)
         {
-            Movement();
-            interv += 0.003f;
+            if (this.transform.position != nextPos.transform.position)
+            {
+                Movement();
+                interv += 0.003f;
+            }
         }
         //currentPos = new Vector3()
     }
