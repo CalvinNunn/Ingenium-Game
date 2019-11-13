@@ -23,7 +23,7 @@ public class Control : MonoBehaviour
     int y;
     int z;
     public int timer;
-    //public ParticleManager pm;
+    public ParticleManager pm;
 
 
     // Start is called before the first frame update
@@ -92,8 +92,8 @@ public class Control : MonoBehaviour
                     {
                         if (hit.transform.name == "Enemy" + i && Input.GetMouseButtonUp(0))//an object is destroyed and then reset back to the screen
                         {
-                            //pm.setPosition(e.GetComponent<EnemyControl>().Enemies[i].transform.position);
-                            //pm.startPlay();
+                            pm.setPosition(e.GetComponent<EnemyControl>().Enemies[i].transform.position);
+                            pm.startPlay();
                             subject.Notify();//updates the score by notifying the subject
                             
                             e.GetComponent<EnemyControl>().Enemies[i].SetActive(false);
