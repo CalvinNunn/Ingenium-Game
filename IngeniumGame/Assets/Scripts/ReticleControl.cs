@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tobii.Gaming;
 
 public class ReticleControl : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class ReticleControl : MonoBehaviour
             Cursor.visible = true;
         }
 
-        transform.position = Input.mousePosition;
+        transform.position = TobiiAPI.GetGazePoint().Screen;//Input.mousePosition;
     }
+
 }

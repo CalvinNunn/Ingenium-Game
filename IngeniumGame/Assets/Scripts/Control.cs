@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using ObserverPattern;
+using Tobii.Gaming;
 
 public class Control : MonoBehaviour
 {
@@ -43,13 +44,15 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 gazePoint = TobiiAPI.GetGazePoint().Screen;
+
         x = Random.Range(-3, 3);
         y = Random.Range(1, 3);
         z = Random.Range(-3, 2);
 
         timer++;
 
-        ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);//sets the raycast to where the mouse is pointing on screen
+        ray = GetComponent<Camera>().ScreenPointToRay(gazePoint);//sets the raycast to where the mouse is pointing on screen
 
         t.text = "Score: " + score;
         h.text = "Health: " + health;
