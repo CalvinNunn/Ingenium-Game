@@ -13,6 +13,7 @@ namespace CommandPattern
         public static bool shouldStartReplay;
         private Coroutine replayCoroutine;
         public bool changeControl = false;
+        public GameObject playerShot;
 
         public int timer = 200;
         void Start()
@@ -43,7 +44,9 @@ namespace CommandPattern
         {
             if (Input.GetMouseButtonDown(0))
             {
+                playerShot.SetActive(false);
                 mouseButton.Execute(player, mouseButton);
+                playerShot.SetActive(true);
             }
             if (Input.GetKey("r"))
             {
