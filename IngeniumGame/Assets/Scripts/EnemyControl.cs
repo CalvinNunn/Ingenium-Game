@@ -24,16 +24,21 @@ public class EnemyControl : MonoBehaviour
         //    Enemies.Add(prefab);
         //}
 
-        for (int i = 0; i < Enemies.Count; i++)
-        {
-            Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height),
+        
+        Vector3 screenPosition1 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 400,
           Camera.main.nearClipPlane * 20));
-            pos.Add(screenPosition);
-            //x = Random.Range(-3, 3);
-            //y = Random.Range(1, 3);
-            //z = Random.Range(-3, 0);
-           // pos.Add(new Vector3(x, y, z));//adds a random position to the vector list of positions
-        }
+        pos.Add(screenPosition1);
+        Vector3 screenPosition2 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 300, Screen.height - 200,
+          Camera.main.nearClipPlane * 20));
+        pos.Add(screenPosition2);
+        Vector3 screenPosition3 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 400, Screen.height - 400,
+          Camera.main.nearClipPlane * 20));
+        pos.Add(screenPosition3);
+        //x = Random.Range(-3, 3);
+        //y = Random.Range(1, 3);
+        //z = Random.Range(-3, 0);
+        // pos.Add(new Vector3(x, y, z));//adds a random position to the vector list of positions
+
     }
 
     public void initializeEnemies()//instantiates enemies based on how many we plan to create
@@ -41,8 +46,7 @@ public class EnemyControl : MonoBehaviour
       
         for (int i = 0; i <= Enemies.Count - 1; i++)
         {
-            Enemies[i] = prefab;
-            Enemies[i] = Instantiate(Enemies[i], pos[i], cameraP.transform.rotation);
+            Enemies[i] = Instantiate(prefab, pos[i], cameraP.transform.rotation);
             Enemies[i].name = "Enemy" + i; 
             Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
             Enemies[i].transform.parent = cameraP.transform;
@@ -50,6 +54,8 @@ public class EnemyControl : MonoBehaviour
         active = true;
         c.health = 3;
     }
+
+  
 
     // Update is called once per frame
     void Update()

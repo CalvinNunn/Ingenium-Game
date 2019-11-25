@@ -25,7 +25,8 @@ public class Control : MonoBehaviour
     int z;
     public int timer;
     public ParticleManager pm;
-
+    public List<Vector3> positions;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,20 +40,24 @@ public class Control : MonoBehaviour
         healthTesting = new EnemyCube(enemy, new returnScore());//assigns observer object to the function it needs
         subject.AddObserver(testing);
         subject.AddObserver(healthTesting);
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+       
+
         Vector2 gazePoint = TobiiAPI.GetGazePoint().Screen;
 
-        x = Random.Range(-3, 3);
-        y = Random.Range(1, 3);
-        z = Random.Range(-3, 2);
+        
 
         timer++;
 
-        ray = GetComponent<Camera>().ScreenPointToRay(gazePoint);//sets the raycast to where the mouse is pointing on screen
+        //ray = GetComponent<Camera>().ScreenPointToRay(gazePoint);//sets the raycast to where the mouse is pointing on screen
+        ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
 
         t.text = "Score: " + score;
         h.text = "Health: " + health;
@@ -77,6 +82,7 @@ public class Control : MonoBehaviour
                 e.GetComponent<EnemyControl>().Enemies[i].SetActive(false);
             }
         }
+        
     }
 
     public void mouse()// calculates where the raycast is pointing if hitting an object
@@ -117,17 +123,27 @@ public class Control : MonoBehaviour
                     subject.NotifyHealth(); //updates health in case player misses al objects on scene
             }
 
-            for (int i = 0; i <= e.GetComponent<EnemyControl>().Enemies.Count - 1; i++)//when the enemy has been destory this resets them back to the screen
+            for (int i = 0; i <= e.Enemies.Count - 1; i++)//when the enemy has been destory this resets them back to the screen
             {
                 if (e.GetComponent<EnemyControl>().Enemies[i].activeInHierarchy == false && timer > 30)
                 {
-
-                    e.Enemies[i].transform.parent = e.cameraP.transform;
-                    e.GetComponent<EnemyControl>().Enemies[i].SetActive(true);
+                    
+                    e.Enemies[i].SetActive(true);
                     //e.GetComponent<EnemyControl>().Enemies[i].transform.position = e.cameraP.transform.position + e.cameraP.transform.forward * 5;
-                    Vector3 screenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height),
-          Camera.main.nearClipPlane * 20));
-                    e.GetComponent<EnemyControl>().Enemies[i].transform.position = screenPosition;
+                    
+                    Vector3 screenPosition1 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 300, Screen.height - 400,
+                     Camera.main.nearClipPlane * 20));
+                    positions.Add(screenPosition1);
+
+                    Vector3 screenPosition2 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 100, Screen.height - 200,
+                      Camera.main.nearClipPlane * 20));
+                    positions.Add(screenPosition2);
+
+                    Vector3 screenPosition3 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 600, Screen.height - 300,
+                      Camera.main.nearClipPlane * 20));
+                    positions.Add(screenPosition3);
+
+                    e.Enemies[i].transform.position = positions[i];
                     e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
                     timer = 0;
                 }

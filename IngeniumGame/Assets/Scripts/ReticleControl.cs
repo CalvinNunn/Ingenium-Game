@@ -21,7 +21,8 @@ public class ReticleControl : MonoBehaviour
             Cursor.visible = true;
         }
 
-        transform.position = TobiiAPI.GetGazePoint().Screen;//Input.mousePosition;
+        //transform.position = TobiiAPI.GetGazePoint().Screen;//Input.mousePosition;
+        transform.position = Input.mousePosition;
     }
 
 }
