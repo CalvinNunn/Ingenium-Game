@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using ObserverPattern;
 using Tobii.Gaming;
 
@@ -67,8 +68,13 @@ public class Control : MonoBehaviour
         if (health == 0)
         {
             s.color = new Vector4(0, 0, 0, 1);
-            s.text = "You lost all Health Points. Your Score is " + score + " Press S to Save your Score, or Q to exit the game. If you want to see the last saved score, press L";
-            
+            s.text = "You lost all Health Points. Your Score is " + score + " Press S to Save your Score, or Q to exit the game or R to restart. If you want to see the last saved score, press L";
+
+            if (Input.GetKey("r"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
             if (Input.GetKey("q"))
             {
                 #if UNITY_EDITOR
