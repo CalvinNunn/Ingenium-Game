@@ -131,28 +131,18 @@ public class Control : MonoBehaviour
 
             for (int i = 0; i <= e.Enemies.Count - 1; i++)//when the enemy has been destory this resets them back to the screen
             {
-                if (e.GetComponent<EnemyControl>().Enemies[i].activeInHierarchy == false && timer > 30)
+                if (e.GetComponent<EnemyControl>().Enemies[i].activeInHierarchy == false && score % 3 == 0)
                 {
                     
-                    e.Enemies[i].SetActive(true);
-                    //e.GetComponent<EnemyControl>().Enemies[i].transform.position = e.cameraP.transform.position + e.cameraP.transform.forward * 5;
-                    
-                    Vector3 screenPosition1 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 300, Screen.height - 400,
-                     Camera.main.nearClipPlane * 20));
-                    positions.Add(screenPosition1);
-
-                    Vector3 screenPosition2 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 100, Screen.height - 200,
-                      Camera.main.nearClipPlane * 20));
-                    positions.Add(screenPosition2);
-
-                    Vector3 screenPosition3 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 600, Screen.height - 300,
-                      Camera.main.nearClipPlane * 20));
-                    positions.Add(screenPosition3);
-
-                    e.Enemies[i].transform.position = positions[i];
-                    e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
-                    timer = 0;
+                        e.Enemies[i].SetActive(true);
+                       
+                        e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
+                        timer = 0;
+                    if (this.gameObject.GetComponent<CameraMove>().isMoving() == false) {
+                    this.gameObject.GetComponent<CameraMove>().trigger();
+                    }
                 }
+
             }
         }
     }

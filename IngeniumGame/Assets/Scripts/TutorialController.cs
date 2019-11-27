@@ -58,6 +58,7 @@ public class TutorialController : MonoBehaviour
                 if (timer == 240)
                 {
                     tutorial = false;
+                    c.score = 0;
                     e.GetComponent<EnemyControl>().initializeEnemies();
                     ListOfPos.Add(new Vector3(0f, 0f, 0f));
                     ListOfPos.Add(new Vector3(0f, 0f, 0f));

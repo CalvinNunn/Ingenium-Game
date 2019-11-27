@@ -26,13 +26,13 @@ public class EnemyControl : MonoBehaviour
 
         
         Vector3 screenPosition1 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 400,
-          Camera.main.nearClipPlane * 20));
+          8));
         pos.Add(screenPosition1);
         Vector3 screenPosition2 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 300, Screen.height - 200,
-          Camera.main.nearClipPlane * 20));
+          8));
         pos.Add(screenPosition2);
         Vector3 screenPosition3 = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 400, Screen.height - 400,
-          Camera.main.nearClipPlane * 20));
+          8));
         pos.Add(screenPosition3);
         //x = Random.Range(-3, 3);
         //y = Random.Range(1, 3);
