@@ -47,7 +47,8 @@ public class EnemyControl : MonoBehaviour
         for (int i = 0; i <= Enemies.Count - 1; i++)
         {
             Enemies[i] = Instantiate(prefab, pos[i], cameraP.transform.rotation);
-            Enemies[i].name = "Enemy" + i; 
+            Enemies[i].name = "Enemy" + i;
+            Enemies[i].transform.rotation = Quaternion.Euler(0, 180, 0);
             Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
             Enemies[i].transform.parent = cameraP.transform;
         }

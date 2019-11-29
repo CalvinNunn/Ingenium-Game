@@ -9,7 +9,8 @@ public class CameraMove : MonoBehaviour
     public Vector3 lastFacing;
     public List<GameObject> Pos = new List<GameObject>();
     public float interv;
-    public float angleLerp;
+    Vector3 direction;
+    Quaternion toRotation;
     public TutorialController tc;
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,10 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (tc.tutorial == false)
         {
-            
+            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 3f * Time.deltaTime);
             if (this.transform.position != Pos[nextPos].transform.position)
             {
                 Movement();
@@ -62,6 +64,7 @@ public class CameraMove : MonoBehaviour
         if (nextPos >= 4) {
             nextPos = 0;
         }
-        transform.LookAt(Pos[nextPos].transform.position);
+        direction = Pos[nextPos].transform.position - transform.position;
+        toRotation = Quaternion.LookRotation(direction, Vector3.up);
     }
 }
