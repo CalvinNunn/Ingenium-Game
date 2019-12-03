@@ -68,37 +68,40 @@
     <Compile Include="Assets\Tobii\Framework\Editor\EyeTrackingSettingsWindow.cs" />
     <Compile Include="Assets\Tobii\Framework\Editor\TobiiEulaCheck.cs" />
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -286,23 +289,26 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Tobii.GameIntegration.Net">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Assets/Tobii/Plugins/Tobii.GameIntegration.Net.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Assets/Tobii/Plugins/Tobii.GameIntegration.Net.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Game">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Assets/Unity Store Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Assets/Unity Store Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Editor">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Assets/Unity Store Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Assets/Unity Store Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
     </Reference>
     <Reference Include="SourceUnityLib">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Assets/Unity Store Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Assets/Unity Store Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/hugoa/Downloads/Fall2019/Game Engines/Repos/Ingenium-Game/IngeniumGame/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/IngeniumGame/IngeniumGame/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

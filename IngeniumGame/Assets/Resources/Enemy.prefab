@@ -176,3 +176,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792945a8112e0fb42935a58f01cff1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pos1: {fileID: 0}
+  pos2: {fileID: 0}
+  ping: 0
+  tempPos: 0
+  tempSprite:
+  - {fileID: 5108601841118324724, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: 763718201113852716, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: 1037891125679955185, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: 6965229494165062650, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: 7488926447407996787, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: 1824921886515328041, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: 3779983321907253453, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: -966056320420023668, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  - {fileID: -8860312699811430183, guid: c1da2a6ba34592c42b01c8b26549dd46, type: 3}
+  timerSprite: {fileID: 0}

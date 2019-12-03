@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Tobii.Gaming;
 public class TutorialController : MonoBehaviour
 {
     public GameObject TutorialObj;
@@ -20,6 +20,7 @@ public class TutorialController : MonoBehaviour
     public List<Vector3> ListOfPos;
     float count = 0;
     bool move = false;
+    public ReticleControl rc;
 
     // Start is called before the first frame update
     void Start()
@@ -74,7 +75,17 @@ public class TutorialController : MonoBehaviour
 
         else if (ListOfPos.Count == 1) // If player is on the last object position, wait for click and remove object instead of lerping it.
         {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (rc.eyeTracking == true)
+            {
+                Vector2 gazePoint = TobiiAPI.GetGazePoint().Screen;
+                ray = GetComponent<Camera>().ScreenPointToRay(gazePoint);
+            }
+            else
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            }
+
             if (Physics.Raycast(ray, out hit))
             {
                 Transform objectHit = hit.transform;

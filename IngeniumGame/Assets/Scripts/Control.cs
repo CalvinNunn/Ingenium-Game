@@ -27,7 +27,7 @@ public class Control : MonoBehaviour
     public int timer;
     public ParticleManager pm;
     public List<Vector3> positions;
-    
+    public ReticleControl rc;
 
     // Start is called before the first frame update
     void Start()
@@ -53,13 +53,16 @@ public class Control : MonoBehaviour
 
         Vector2 gazePoint = TobiiAPI.GetGazePoint().Screen;
 
-        
-
         timer++;
 
-        //ray = GetComponent<Camera>().ScreenPointToRay(gazePoint);//sets the raycast to where the mouse is pointing on screen
-        ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-
+        if (rc.eyeTracking == true)
+        {
+            ray = GetComponent<Camera>().ScreenPointToRay(gazePoint);//sets the raycast to where the mouse is pointing on screen
+        }
+        else
+        {
+            ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        }
         t.text = "Score: " + score;
         h.text = "Health: " + health;
         if (health > 0)
@@ -119,14 +122,14 @@ public class Control : MonoBehaviour
                 }
                 else
                 {
-                    if (Input.GetMouseButtonUp(0))
-                        subject.NotifyHealth(); //updates health in case player hits the platform
+                    if (Input.GetMouseButtonUp(0)) { }
+                        //subject.NotifyHealth(); //updates health in case player hits the platform
                 }
             }
             else
             {
-                if (Input.GetMouseButtonUp(0)) 
-                    subject.NotifyHealth(); //updates health in case player misses al objects on scene
+                if (Input.GetMouseButtonUp(0)) { }
+                   // subject.NotifyHealth(); //updates health in case player misses al objects on scene
             }
 
             for (int i = 0; i <= e.Enemies.Count - 1; i++)//when the enemy has been destory this resets them back to the screen
@@ -135,8 +138,10 @@ public class Control : MonoBehaviour
                 {
                     
                         e.Enemies[i].SetActive(true);
-                       
-                        e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
+
+                    e.GetComponent<EnemyAI>().randomize();
+                    e.GetComponent<EnemyAI>().resetTimer();
+                    e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
                         timer = 0;
                     if (this.gameObject.GetComponent<CameraMove>().isMoving() == false) {
                     this.gameObject.GetComponent<CameraMove>().trigger();

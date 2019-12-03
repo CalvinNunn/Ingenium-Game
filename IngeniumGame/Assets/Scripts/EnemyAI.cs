@@ -4,68 +4,49 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public List<Vector3> EnemyPos;
-    public int timer = 180;
-    public Vector3 LastPos;
-    public int NextPos = 1;
-    public float l = 0;
+    public GameObject pos1;
+    public GameObject pos2;
+    public float ping = 0;
+    public float tempPos;
+    float timer;
+    public List<Sprite> tempSprite;
+    public GameObject timerSprite;
     // Start is called before the first frame update
     void Start()
     {
-        EnemyPos.Add(new Vector3());
-        EnemyPos.Add(new Vector3());
-        EnemyPos.Add(new Vector3());
-        EnemyPos.Add(new Vector3());
-        EnemyPos.Add(new Vector3());
+        tempPos = Random.value * 4 + 4;
+        timer = 90 * tempPos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        EnemyPos[0]=(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 100, Screen.height - 100, 8)));
-        EnemyPos[1]=(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - (Screen.width - 100), Screen.height - 100, 8)));
-        EnemyPos[2]=(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - (Screen.width - 100), Screen.height - (Screen.height - 100), 8)));
-        EnemyPos[3]=(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 100, Screen.height - (Screen.height - 100), 8)));
-        EnemyPos[4]=(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - (Screen.width / 2), Screen.height - (Screen.height / 2), 8)));
+        timer--;
+        ping = Mathf.PingPong(Time.time / tempPos, 1);
+       this.transform.localPosition = new Vector3
+                (Mathf.Lerp(pos1.transform.localPosition.x, pos2.transform.localPosition.x, ping),
+                Mathf.Lerp(pos1.transform.localPosition.y, pos2.transform.localPosition.y, ping),
+                Mathf.Lerp(pos1.transform.localPosition.z, pos2.transform.localPosition.z, ping));
 
-        if (NextPos > 0) {
-            LastPos = ((EnemyPos[NextPos - 1]));
-        }
-        else {
-            LastPos = ((EnemyPos[4]));
-        }
+        timerSprite.GetComponent<SpriteRenderer>().sprite = tempSprite[(int)((90 * tempPos) / (timer * 9)) / 9];
 
-        if (this.transform.localPosition != EnemyPos[NextPos])
+        if(timer <= 0)
         {
-            this.transform.localPosition = lerppppp();
-            if (l < 1)
-            {
-                l += 0.002f;
-            }
+            this.transform.parent.gameObject.GetComponent<Control>().health--;
+            timer = 90 * tempPos;
         }
-        else
-        {
-            l = 0;
-            LastPos = EnemyPos[NextPos];
-            NextPos++;
-            if (NextPos == 5)
-            {
-                NextPos = 0;
-            }
-        }
+       
     }
 
-    Vector3 lerppppp() {
-        return new Vector3
-                (Mathf.Lerp(LastPos.x, EnemyPos[NextPos].x, l),
-                Mathf.Lerp(LastPos.y, EnemyPos[NextPos].y, l),
-                Mathf.Lerp(LastPos.z, EnemyPos[NextPos].z, l));
+    public void randomize()
+    {
+        tempPos = Random.value * 4 + 4;
+        ping = Mathf.PingPong(Time.time / tempPos, 1);
     }
 
-    public void SetStart() {
-        //this.transform.localPosition = EnemyPos[1];
-        LastPos = transform.localPosition;
-
-        NextPos = Random.Range(0,4);
+    public void resetTimer()
+    {
+        timer = 90 * tempPos;
     }
+
 }

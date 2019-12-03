@@ -11,6 +11,9 @@ public class EnemyControl : MonoBehaviour
     public TutorialController tut;
     public bool active;
     public GameObject cameraP;
+    public GameObject pos1;
+    public GameObject pos2;
+    public GameObject spritePrefab;
     int x;
     int y;
     int z;
@@ -51,7 +54,10 @@ public class EnemyControl : MonoBehaviour
             Enemies[i].transform.rotation = Quaternion.Euler(0, 180, 0);
             Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
             Enemies[i].transform.parent = cameraP.transform;
-            Enemies[i].GetComponent<EnemyAI>().SetStart();
+            Enemies[i].GetComponent<EnemyAI>().pos1 = pos1;
+            Enemies[i].GetComponent<EnemyAI>().pos2 = pos2;
+            Enemies[i].GetComponent<EnemyAI>().timerSprite = Instantiate(spritePrefab, Enemies[i].transform);
+            Enemies[i].GetComponent<EnemyAI>().timerSprite.transform.localPosition = new Vector3(0f, 20f, 0f);
         }
 
         active = true;

@@ -5,6 +5,7 @@ using Tobii.Gaming;
 
 public class ReticleControl : MonoBehaviour
 {
+    public bool eyeTracking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,18 @@ public class ReticleControl : MonoBehaviour
             Cursor.visible = true;
         }
 
-        //transform.position = TobiiAPI.GetGazePoint().Screen;//Input.mousePosition;
-        transform.position = Input.mousePosition;
+        if (eyeTracking == true)
+        {
+            transform.position = TobiiAPI.GetGazePoint().Screen;//Input.mousePosition;
+        }
+        else
+        {
+            transform.position = Input.mousePosition;
+        }
     }
 
+    public void changeEyeTracker()
+    {
+        eyeTracking = !eyeTracking;
+    }
 }
