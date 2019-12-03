@@ -89,8 +89,9 @@ GameObject:
   - component: {fileID: 5145792401941698756}
   - component: {fileID: 7330783828037090439}
   - component: {fileID: 8764025558120577794}
+  - component: {fileID: 7426957785712224372}
   m_Layer: 0
-  m_Name: EnemyTest
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,3 +164,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4732937762076777578, guid: bcf7dcc5345f0cc449e494ab3fd413c0, type: 3}
+--- !u!114 &7426957785712224372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156827297642801879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792945a8112e0fb42935a58f01cff1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,7 +13,7 @@ public class TutorialController : MonoBehaviour
     public Control c;
     public bool tutorial;
     bool healthTutorial;
-    int timer;
+    public int timer;
     RaycastHit hit;
     Ray ray;
     Vector3 PrevPos;
@@ -57,12 +57,16 @@ public class TutorialController : MonoBehaviour
                 TutorialText.text = "Hit as many enemies as possible to get a high score!";
                 if (timer == 240)
                 {
-                    tutorial = false;
                     c.score = 0;
-                    e.GetComponent<EnemyControl>().initializeEnemies();
+                    if (tutorial == true)
+                    {
+                        e.GetComponent<EnemyControl>().initializeEnemies();
+                    }
                     ListOfPos.Add(new Vector3(0f, 0f, 0f));
                     ListOfPos.Add(new Vector3(0f, 0f, 0f));
                     TutorialText.color = new Vector4(0, 0, 0, 0);
+                    timer++;
+                    tutorial = false;
                 }
             }
             timer++;
