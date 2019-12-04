@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
                 Mathf.Lerp(pos1.transform.localPosition.y, pos2.transform.localPosition.y, ping),
                 Mathf.Lerp(pos1.transform.localPosition.z, pos2.transform.localPosition.z, ping));
 
-        timerSprite.GetComponent<SpriteRenderer>().sprite = tempSprite[(int)((90 * tempPos) / (timer * 9)) / 9];
+        timerSprite.GetComponent<SpriteRenderer>().sprite = tempSprite[(int)((timer * 9) / (90 * tempPos))];
 
         if(timer <= 0)
         {
