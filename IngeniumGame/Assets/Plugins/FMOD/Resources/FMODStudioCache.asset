@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Muffled Distant Gunfight
   guid: 637cc5dc2210324fa06b459a167fd1f6
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/Bombardment
   guid: 9b8d06987d20f64e8f51fcb962337cb0
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: event:/PlayerGun
   guid: 71b298b71cb02742a08a349b953789f7
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -105,6 +105,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-3657747621667123660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637110485135038986
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 4106287372826738080}
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   EditorEvents:
   - {fileID: 9125382384585956982}
   - {fileID: 7945240056408449189}
@@ -132,10 +150,10 @@ MonoBehaviour:
   - {fileID: 4631727013740004745}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   StringsBanks:
   - {fileID: 4106287372826738080}
-  stringsBankWriteTime: 637110463911484689
+  stringsBankWriteTime: 637110485135058994
   cacheVersion: 3
 --- !u!114 &739249512690136802
 MonoBehaviour:
@@ -152,7 +170,7 @@ MonoBehaviour:
   Path: event:/Rifle
   guid: be0c5fd6fa0f8146aabcc0d098666c05
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -211,7 +229,7 @@ MonoBehaviour:
   Path: event:/Distant Gunfight
   guid: b836ea0f49bb45488f3adb0cf121cb04
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -233,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD/FMOD_Studio/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637110463911484689
+  lastModified: 637110485135058994
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -254,7 +272,7 @@ MonoBehaviour:
   Path: event:/Flying Bomber
   guid: e0342a8c6e219842aa6ef56c678138cb
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -331,7 +349,7 @@ MonoBehaviour:
   Path: event:/Skylines
   guid: a7ca34810e50d74abbf3898f66017e62
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -354,7 +372,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 23048ca62a48a44e9eef1ac343de7bf9
   Banks:
-  - {fileID: -4758104526991378977}
+  - {fileID: -3657747621667123660}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0

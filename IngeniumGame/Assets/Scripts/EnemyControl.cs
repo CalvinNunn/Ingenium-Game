@@ -61,7 +61,7 @@ public class EnemyControl : MonoBehaviour
         }
 
         active = true;
-        c.health = 3;
+        c.health = 20;
     }
 
   

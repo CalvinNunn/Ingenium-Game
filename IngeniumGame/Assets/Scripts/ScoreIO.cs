@@ -27,12 +27,12 @@ public class ScoreIO : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            saveScore(saveload.GetComponent<RayTest>().score / saveload.GetComponent<RayTest>().e.Enemies.Count);
+            saveScore(saveload.GetComponent<Control>().score / saveload.GetComponent<Control>().e.Enemies.Count);
         }
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-             saveload.GetComponent<RayTest>().score = loadScore() * saveload.GetComponent<RayTest>().e.Enemies.Count;
+             saveload.GetComponent<Control>().score = loadScore() * saveload.GetComponent<Control>().e.Enemies.Count;
         }
     }
 }

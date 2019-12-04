@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         tempPos = Random.value * 4 + 4;
-        timer = 90 * tempPos;
+        timer = 120 * tempPos;
     }
 
     // Update is called once per frame
@@ -28,12 +28,15 @@ public class EnemyAI : MonoBehaviour
                 Mathf.Lerp(pos1.transform.localPosition.y, pos2.transform.localPosition.y, ping),
                 Mathf.Lerp(pos1.transform.localPosition.z, pos2.transform.localPosition.z, ping));
 
-        timerSprite.GetComponent<SpriteRenderer>().sprite = tempSprite[(int)((timer * 9) / (90 * tempPos))];
+        if (this.gameObject.activeSelf == true)
+        {
+            timerSprite.GetComponent<SpriteRenderer>().sprite = tempSprite[(int)((timer * 9) / (90 * tempPos))];
+        }
 
         if(timer <= 0)
         {
             this.transform.parent.gameObject.GetComponent<Control>().health--;
-            timer = 90 * tempPos;
+            timer = 120 * tempPos;
         }
        
     }
@@ -47,7 +50,7 @@ public class EnemyAI : MonoBehaviour
 
     public void resetTimer()
     {
-        timer = 90 * tempPos;
+        timer = 120 * tempPos;
     }
 
 }

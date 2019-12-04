@@ -37,7 +37,7 @@ public class Control : MonoBehaviour
         {
             enemy = e.Enemies[i];//assigns the prefab object to the list of enemies
         }
-        health = 3;
+        health = 20;
         testing = new EnemyCube(enemy, new returnScore());//assigns observer object to the function it needs
         healthTesting = new EnemyCube(enemy, new returnScore());//assigns observer object to the function it needs
         subject.AddObserver(testing);
