@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8830532543153547328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Muffled Distant Gunfight
+  m_EditorClassIdentifier: 
+  Path: event:/Muffled Distant Gunfight
+  guid: 637cc5dc2210324fa06b459a167fd1f6
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 173500
 --- !u!114 &-6740997664363629932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +41,70 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6460657215448384662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bombardment
+  m_EditorClassIdentifier: 
+  Path: event:/Bombardment
+  guid: 9b8d06987d20f64e8f51fcb962337cb0
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 38500
+--- !u!114 &-5313177700934957693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerGun
+  m_EditorClassIdentifier: 
+  Path: event:/PlayerGun
+  guid: 71b298b71cb02742a08a349b953789f7
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 740
+--- !u!114 &-4758104526991378977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637110463911404903
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,16 +119,106 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 4106287372826738080}
-  - {fileID: 4738837465994084420}
+  - {fileID: -4758104526991378977}
   EditorEvents:
   - {fileID: 9125382384585956982}
+  - {fileID: 7945240056408449189}
+  - {fileID: -8830532543153547328}
+  - {fileID: -5313177700934957693}
+  - {fileID: -6460657215448384662}
+  - {fileID: 7265557230529602532}
+  - {fileID: 1742789997134797297}
+  - {fileID: 739249512690136802}
+  - {fileID: 4631727013740004745}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4738837465994084420}
+  - {fileID: -4758104526991378977}
   StringsBanks:
   - {fileID: 4106287372826738080}
-  stringsBankWriteTime: 637102181669165295
+  stringsBankWriteTime: 637110463911484689
   cacheVersion: 3
+--- !u!114 &739249512690136802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rifle
+  m_EditorClassIdentifier: 
+  Path: event:/Rifle
+  guid: be0c5fd6fa0f8146aabcc0d098666c05
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 41295
+--- !u!114 &1322790860216377735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637110460897914283
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1488110086923041861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/FMOD_Studio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637104681508604445
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1742789997134797297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Distant Gunfight
+  m_EditorClassIdentifier: 
+  Path: event:/Distant Gunfight
+  guid: b836ea0f49bb45488f3adb0cf121cb04
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 63026
 --- !u!114 &4106287372826738080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +233,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMOD/FMOD_Studio/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637102181669165295
+  lastModified: 637110463911484689
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 730
+    Value: 1050
   Exists: 1
+--- !u!114 &4631727013740004745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flying Bomber
+  m_EditorClassIdentifier: 
+  Path: event:/Flying Bomber
+  guid: e0342a8c6e219842aa6ef56c678138cb
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 64000
 --- !u!114 &4738837465994084420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +316,52 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &7265557230529602532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Skylines
+  m_EditorClassIdentifier: 
+  Path: event:/Skylines
+  guid: a7ca34810e50d74abbf3898f66017e62
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 164000
+--- !u!114 &7945240056408449189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/Explosion
+  guid: 23048ca62a48a44e9eef1ac343de7bf9
+  Banks:
+  - {fileID: -4758104526991378977}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
 --- !u!114 &8569045874579509615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +414,6 @@ MonoBehaviour:
   guid: 71b298b71cb02742a08a349b953789f7
   Banks:
   - {fileID: 8569045874579509615}
-  - {fileID: 4738837465994084420}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

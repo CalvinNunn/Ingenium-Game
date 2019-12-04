@@ -41,19 +41,20 @@ public class TutorialController : MonoBehaviour
         {
             TutorialObj.SetActive(false); // Deactivate Tutorial Object
 
-            if (timer >= 100 && healthTutorial == false) // If Health Tutorial wasn't shown
-            {
-                c.health = 2;
-                TutorialText.text = "If you miss a target you'll lose health. If it reaches 0 you Lose!";
-                TutorialHealth.color = new Vector4(1, 0, 0, 1);
-                if (timer == 200)
-                {
-                    timer = 0;
-                    TutorialHealth.color = new Vector4(0, 0, 0, 1);
-                    healthTutorial = true;
-                }
-            }
-            else if (timer >= 120) // If Health Tutorial has been done
+            //if (timer >= 100 && healthTutorial == false) // If Health Tutorial wasn't shown
+            //{
+            //    c.health = 2;
+            //    TutorialText.text = "If you miss a target you'll lose health. If it reaches 0 you Lose!";
+            //    TutorialHealth.color = new Vector4(1, 0, 0, 1);
+            //    if (timer == 200)
+            //    {
+            //        timer = 0;
+            //        TutorialHealth.color = new Vector4(0, 0, 0, 1);
+            //        healthTutorial = true;
+            //    }
+            //}
+            //else 
+            if (timer >= 120) // If Health Tutorial has been done
             {
                 TutorialText.text = "Hit as many enemies as possible to get a high score!";
                 if (timer == 240)
@@ -139,32 +140,32 @@ public class TutorialController : MonoBehaviour
             {
                 move = true;
             }
-            else if (Input.GetMouseButtonDown(0)) // If Player Misses the object and Hits the "Floor"
-            {
-                if (healthTutorial == false)
-                {
-                    c.health = 2;
-                    TutorialHealth.color = new Vector4(1, 0, 0, 1);
-                    TutorialText.text = "If you miss a target you'll lose health. If it reaches 0 you Lose!";
-                    healthTutorial = true;
-                    timer = -50;
-                }
-            }
+            //else if (Input.GetMouseButtonDown(0)) // If Player Misses the object and Hits the "Floor"
+            //{
+            //    if (healthTutorial == false)
+            //    {
+            //        c.health = 2;
+            //        TutorialHealth.color = new Vector4(1, 0, 0, 1);
+            //        TutorialText.text = "If you miss a target you'll lose health. If it reaches 0 you Lose!";
+            //        healthTutorial = true;
+            //        timer = -50;
+            //    }
+            //}
         }
 
         else // If Raycast doesn't hit a Game Object
         {
-            if (Input.GetMouseButtonDown(0)) // And Mouse Button is pressed aiming at nothing
-            {
-                if (healthTutorial == false)
-                {
-                    c.health = 2;
-                    TutorialHealth.color = new Vector4(1, 0, 0, 1);
-                    TutorialText.text = "If you miss a target you'll lose health. If it reaches 0 you Lose!";
-                    healthTutorial = true;
-                    timer = -50;
-                }
-            }
+            //if (Input.GetMouseButtonDown(0)) // And Mouse Button is pressed aiming at nothing
+            //{
+            //    if (healthTutorial == false)
+            //    {
+            //        c.health = 2;
+            //        TutorialHealth.color = new Vector4(1, 0, 0, 1);
+            //        TutorialText.text = "If you miss a target you'll lose health. If it reaches 0 you Lose!";
+            //        healthTutorial = true;
+            //        timer = -50;
+            //    }
+            //}
         }
     }
 }
