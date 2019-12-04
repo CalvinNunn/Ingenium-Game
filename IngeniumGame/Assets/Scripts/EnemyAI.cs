@@ -42,6 +42,7 @@ public class EnemyAI : MonoBehaviour
     {
         tempPos = Random.value * 4 + 4;
         ping = Mathf.PingPong(Time.time / tempPos, 1);
+        
     }
 
     public void resetTimer()

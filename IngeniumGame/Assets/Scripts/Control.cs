@@ -28,6 +28,7 @@ public class Control : MonoBehaviour
     public ParticleManager pm;
     public List<Vector3> positions;
     public ReticleControl rc;
+    public GameObject testFix;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,10 @@ public class Control : MonoBehaviour
 
         Vector2 gazePoint = TobiiAPI.GetGazePoint().Screen;
 
-        timer++;
+        if (Input.GetKey("t"))
+        {
+            rc.changeEyeTracker();
+        }
 
         if (rc.eyeTracking == true)
         {
@@ -137,12 +141,12 @@ public class Control : MonoBehaviour
                 if (e.GetComponent<EnemyControl>().Enemies[i].activeInHierarchy == false && score % 3 == 0)
                 {
                     
-                        e.Enemies[i].SetActive(true);
+                    e.Enemies[i].SetActive(true);
 
-                    e.GetComponent<EnemyAI>().randomize();
-                    e.GetComponent<EnemyAI>().resetTimer();
-                    e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
-                        timer = 0;
+                    testFix.GetComponent<EnemyAI>().randomize();
+                    testFix.GetComponent<EnemyAI>().resetTimer();
+                    //e.Enemies[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1, 0.5f, 1f);
+                       
                     if (this.gameObject.GetComponent<CameraMove>().isMoving() == false) {
                     this.gameObject.GetComponent<CameraMove>().trigger();
                     }
